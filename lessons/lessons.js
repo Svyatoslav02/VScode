@@ -68,7 +68,7 @@ decrementButton.addEventListener('click', () => {
     numberInput.value = currentValue - 1;
 });
 
-
+/*block 6 */
 const addBlockButton = document.getElementById('add-block-button');
 const blocksContainer = document.getElementById('blocks-container');
 
