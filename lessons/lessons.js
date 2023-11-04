@@ -36,19 +36,19 @@ const mouseClick = document.getElementById('mouse-click');
 mouseTracker.addEventListener('mousemove', (e) => {
     const x = e.clientX;
     const y = e.clientY;
-    mouseCoordinates.innerText = `Координати мишки: X=${x}, Y=${y}`;
+    mouseCoordinates.innerText = `Mouse coordinates: X=${x}, Y=${y}`;
 });
 
 mouseTracker.addEventListener('mousedown', (e) => {
     const button = e.button;
-    const buttonName = button === 0 ? 'ліва кнопка' : 'права кнопка';
-    mouseClick.innerText = `Натиснуто: ${buttonName}`;
+    const buttonName = button === 0 ? 'left button' : 'right button';
+    mouseClick.innerText = `pressed: ${buttonName}`;
 });
 /*block 4 */
 const generateButton = document.getElementById('generate-button');
 const randomNumber = document.getElementById('random-number');
 
 generateButton.addEventListener('click', () => {
-    const random = Math.floor(Math.random() * 101); // Генерує випадкове число від 0 до 100
-    randomNumber.textContent = `Випадкове число: ${random}`;
+    const random = Math.floor(Math.random() * 101); 
+    randomNumber.textContent = `A random number: ${random}`;
 });
