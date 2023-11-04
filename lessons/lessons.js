@@ -49,6 +49,35 @@ const generateButton = document.getElementById('generate-button');
 const randomNumber = document.getElementById('random-number');
 
 generateButton.addEventListener('click', () => {
-    const random = Math.floor(Math.random() * 101); 
+    const random = Math.floor(Math.random() * 101);
     randomNumber.textContent = `A random number: ${random}`;
 });
+
+/*block 5 */
+const numberInput = document.getElementById('number-input');
+const incrementButton = document.getElementById('increment-button');
+const decrementButton = document.getElementById('decrement-button');
+
+incrementButton.addEventListener('click', () => {
+    const currentValue = parseInt(numberInput.value);
+    numberInput.value = currentValue + 1;
+});
+
+decrementButton.addEventListener('click', () => {
+    const currentValue = parseInt(numberInput.value);
+    numberInput.value = currentValue - 1;
+});
+
+
+const addBlockButton = document.getElementById('add-block-button');
+const blocksContainer = document.getElementById('blocks-container');
+
+addBlockButton.addEventListener('click', () => {
+    const block = document.createElement('div');
+    block.classList.add('block');
+    block.style.backgroundColor = getRandomColor();
+    block.onclick = () => blocksContainer.removeChild(block);
+    blocksContainer.appendChild(block);
+});
+
+const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
