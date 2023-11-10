@@ -1,0 +1,16 @@
+.table {
+    margin: 50px auto;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+}
+.border-left-right {
+    border-left: 2px solid rgb(51, 13, 221);
+    border-right: 2px solid rgb(51, 13, 221);
+}
+
+.table th, .table td{
+    padding: 5px;
+}
+.Name{
+    text-align:left;
+}
