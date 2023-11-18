@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #7e6e15;
+}
+
+#message-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.message {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.messageHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/****************************/
+.question {
+    margin-bottom: 10px;
+}
+
+/****************************/
+#styled-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/****************************/
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/****************************/
+#booked-tickets {
+    margin-top: 20px;
+}

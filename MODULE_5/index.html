@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--TASK_1-->
+    <h1>Forum</h1>
+
+    <ul id="message-list">
+
+    </ul>
+
+    <form id="message-form">
+        <label for="username">Name:</label>
+        <input type="text" id="username" required>
+        <br>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="1" required></textarea>
+        <br>
+        <br>
+        <button type="button" onclick="addMessage()">Enter message</button>
+    </form>
+
+    <!--TASK_2-->
+    <h1>TEST</h1>
+
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. Яка столиця Франції?</p>
+            <label>
+                <input type="radio" name="q1" value="if"> Івано-Франківськ
+            </label>
+            <label>
+                <input type="radio" name="q1" value="paris"> Париж
+            </label>
+        </div>
+
+        <div class="question">
+            <p>2. 10 чи 9 ? </p>
+            <label>
+                <input type="radio" name="q2" value="9"> 9
+            </label>
+            <label>
+                <input type="radio" name="q2" value="10"> 10
+            </label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Enter Test</button>
+    </form>
+
+    <!--TASK_3-->
+    <h1>TEXT</h1>
+
+    <form id="styled-text-form" onsubmit="showStyledText(event)">
+        <label for="input-text">Enter text:</label>
+        <textarea id="input-text" rows="4" required></textarea>
+
+        <label for="font-size">type:</label>
+        <input type="number" id="font-size" min="1" max="50" value="16" required>
+
+        <label for="font-color">color:</label>
+        <input type="color" id="font-color" value="#3498db" required>
+
+        <label for="bold">bold:</label>
+        <input type="checkbox" id="bold">
+
+        <label for="italic">italic:</label>
+        <input type="checkbox" id="italic">
+
+        <label for="alignment">text-align:</label>
+        <select id="alignment">
+            <option value="left">left</option>
+            <option value="center">center</option>
+            <option value="right">right</option>
+            <option value="justify">justiify</option>
+        </select>
+
+        <button type="submit">submit</button>
+    </form>
+    <!--TASK_4-->
+    <div id="styled-text"></div>
+
+    <h1>Book Store</h1>
+
+    <form id="order-form" onsubmit="confirmOrder(event)">
+        <label for="book">Choose a book:</label>
+        <select id="book" required>
+            <option value="book1">Book 1</option>
+            <option value="book2">Book 2</option>
+        </select>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1" required>
+        <br>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="delivery-date">Delivery Date:</label>
+        <input type="date" id="delivery-date" required>
+        <br>
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" rows="4" required></textarea>
+        <br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="confirmation-message"></div>
+    <!--TASK_5-->
+    <h1>Train Ticket Booking</h1>
+
+    <form id="booking-form" onsubmit="bookTickets(event)">
+        <label for="direction">Select a direction:</label>
+        <select id="direction" required>
+            <option value="direction1">Direction 1</option>
+            <option value="direction2">Direction 2</option>
+            <option value="direction2">Direction 3</option>
+            <option value="direction2">Direction 4</option>
+        </select>
+    <br>
+        <label for="date">Select a date:</label>
+        <input type="date" id="date" required>
+        <br>
+        <label for="seats">Select seats for booking:</label>
+        <select id="seats" multiple required>
+            <option value="seat1">Seat 1</option>
+            <option value="seat2">Seat 2</option>
+            <option value="seat3">Seat 3</option>
+        </select>
+        <br>
+        <button type="submit">Book Tickets</button>
+    </form>
+    
+    <div id="booked-tickets"></div>
+</body>
+
+</html>
